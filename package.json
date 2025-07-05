@@ -1,0 +1,43 @@
+{
+  "name": "medimind-ai",
+  "version": "1.0.0",
+  "description": "Your AI Health Companion - Get instant, AI-powered health advice for any condition",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx serve .",
+    "dev": "npx live-server --port=3000",
+    "build": "echo 'No build process needed for vanilla HTML/CSS/JS'",
+    "lint": "npx eslint script.js",
+    "format": "npx prettier --write *.html *.css *.js"
+  },
+  "keywords": [
+    "health",
+    "ai",
+    "medical",
+    "advice",
+    "tavily",
+    "healthcare",
+    "symptoms",
+    "medicine"
+  ],
+  "author": "MediMind AI Team",
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^8.0.0",
+    "prettier": "^3.0.0",
+    "live-server": "^1.2.2",
+    "serve": "^14.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/skkuhg/medimind-ai.git"
+  },
+  "bugs": {
+    "url": "https://github.com/skkuhg/medimind-ai/issues"
+  },
+  "homepage": "https://skkuhg.github.io/medimind-ai",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
