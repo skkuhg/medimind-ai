@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediMind AI - Your AI Health Companion</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <div class="header-content">
+                    <div class="logo">
+                        <div class="logo-icon">🧠</div>
+                        <span>MediMind AI</span>
+                    </div>
+                    <div class="nav-buttons">
+                        <button class="nav-btn active" onclick="showHome()">🏠 Home</button>
+                        <button class="nav-btn" onclick="showFavorites()">⭐ Favorites</button>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <div class="container" id="content">
+                <!-- Home Page Content -->
+                <div id="homePage">
+                    <div class="hero-section">
+                        <h1 class="hero-title">Your AI Health Companion</h1>
+                        <p class="hero-subtitle">Get instant, AI-powered health advice for any condition</p>
+                    </div>
+
+                    <div class="search-container">
+                        <div class="search-box">
+                            <input 
+                                type="text" 
+                                class="search-input" 
+                                id="searchInput" 
+                                placeholder="Type your illness (e.g., migraine, diabetes)..."
+                                onkeypress="handleKeyPress(event)"
+                            >
+                            <button class="search-btn" onclick="searchIllness()">Search</button>
+                        </div>
+                    </div>
+
+                    <!-- Recent Searches -->
+                    <div class="recent-searches" id="recentSearchesSection" style="display: none;">
+                        <h3 class="recent-searches-title">Recent searches</h3>
+                        <div class="recent-searches-list" id="recentSearchesList"></div>
+                    </div>
+
+                    <div class="examples-section">
+                        <h2 class="section-title">Try Examples</h2>
+                        <div class="examples-grid">
+                            <div class="example-card" onclick="searchExample('Fever')">
+                                <div class="example-icon">🌡️</div>
+                                <div class="example-text">Fever</div>
+                            </div>
+                            <div class="example-card" onclick="searchExample('Back Pain')">
+                                <div class="example-icon">🧍</div>
+                                <div class="example-text">Back Pain</div>
+                            </div>
+                            <div class="example-card" onclick="searchExample('Anxiety')">
+                                <div class="example-icon">😟</div>
+                                <div class="example-text">Anxiety</div>
+                            </div>
+                            <div class="example-card" onclick="searchExample('Allergies')">
+                                <div class="example-icon">🤧</div>
+                                <div class="example-text">Allergies</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Results will be displayed here -->
+                    <div id="resultsSection"></div>
+                </div>
+
+                <!-- Favorites Page Content -->
+                <div id="favoritesPage" style="display: none;">
+                    <div class="hero-section">
+                        <h1 class="hero-title">Your Saved Health Advice</h1>
+                        <p class="hero-subtitle">Access your bookmarked health information anytime</p>
+                    </div>
+                    <div id="favoritesContent"></div>
+                </div>
+            </div>
+        </main>
+
+        <!-- Disclaimer Footer -->
+        <footer class="disclaimer">
+            <div class="container">
+                <p><strong>⚠️ Medical Disclaimer:</strong> This app provides general health information for educational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult with a qualified healthcare provider for any medical concerns.</p>
+            </div>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
